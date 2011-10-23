@@ -31,7 +31,7 @@ before commiting them to git and deploying to production.
 
 ## Example Development Workflow
 
-    git clone https://aussielunix@bitbucket.org/aussielunix/graylog2-appliance.git  
+    git clone https://bitbucket.org/aussielunix/graylog2-appliance.git  
     ssh-copy-id -i ~/.ssh/lunix_dsa.pub root@dev-vm.local
     cd graylog2-appliance
     cap puppet:prepd HOST="dev-vm.local" (HOST is optional and overrides the default HOST)  
@@ -43,7 +43,7 @@ before commiting them to git and deploying to production.
 
 ## Example Production Workflow
 
-    git clone https://aussielunix@bitbucket.org/aussielunix/graylog2-appliance.git
+    git clone https://bitbucket.org/aussielunix/graylog2-appliance.git
     ssh-copy-id -i ~/.ssh/lunix_dsa.pub root@example.com.au
     cd graylog2-appliance
     cap puppet:prep HOST="example.com.au" #git clone + install puppet etc
