@@ -31,7 +31,7 @@ namespace :puppet do
     run "apt-get install -qy ruby rubygems libshadow-ruby1.8 git-core libruby-extras"
     run "groupadd -r puppet && useradd -r -M -g puppet puppet"
     run "gem install puppet --no-rdoc --no-ri"
-    run "git clone git@bitbucket.org:aussielunix/graylog2-appliance.git /opt/build"
+    run "git clone https://bitbucket.org/aussielunix/graylog2-appliance.git /opt/build"
   end
 
   desc "update puppet repos on dev server - rsync"
