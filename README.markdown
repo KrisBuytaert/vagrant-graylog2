@@ -1,12 +1,16 @@
 # graylog2-appliance
 
-This repos is specificly for the building of a graylog2 server.  
+This is an appliance stack for simplyfying the building of a central logging  
+server based on Graylog2.  
+Currently this will install everything needed and leave you with a working Graylog2  
+server ready for connections, with the web UI on port 8080.  
+The appliance will take around 20 or so minutes to build depending on the speed  
+of your VM and the internet connection.  
 
 ## In here you will find:  
 
 * a collection of puppet(2.7) manifests and modules  
 * a capistrano recipe for orchestration  
-
 
 ## Pre-requisites
 
@@ -16,12 +20,12 @@ The following pre-requisites should be met to be able to use this appliance.
 * root access to the VM (can be disabled when appliance is built)  
 * ssh keys deployed and ssh-agent forwarding turned on.
 * capistrano installed locally
- * gem install capistrano (if needed)
+  * gem install capistrano (if needed)
 
-## Notes
+## Workflows / Usage
 
 There is two different work flows included with this appliance.  
-One makes use of git and puppet and the other rsync and puppet.  
+One makes use of git + puppet and the other rsync + puppet.  
 rsync + puppet is great for testing changes to the puppet manifests  
 before commiting them to git and deploying to production.  
 
@@ -48,9 +52,9 @@ before commiting them to git and deploying to production.
 
 ## TODO
 
-
 * document document document
 * create a wiki page with more info
 * write fog script for creating a linode VM
 * test with different VM/cloud providers
-
+* add smoke tests to modules
+* cucumber tests to test appliance has built correctly.
