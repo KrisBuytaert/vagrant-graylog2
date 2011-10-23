@@ -36,7 +36,7 @@ before commiting them to git and deploying to production.
     cd graylog2-appliance
     cap puppet:prepd HOST="dev-vm.local" (HOST is optional and overrides the default HOST)  
     cap puppet:go HOST="dev-vm.local" OPTIONS="--noop"  
-    hack hack hack
+    <hack hack hack>
     cap puppet:upd HOST="dev-vm.local" #rsyncs changes to VM
     cap puppet:go HOST="dev-vm.local"  
     git commit
@@ -49,6 +49,7 @@ before commiting them to git and deploying to production.
     cap puppet:prep HOST="example.com.au" #git clone + install puppet etc
     cap puppet:go HOST="example.com.au" OPTIONS="--noop"
     cap puppet:go HOST="example.com.au"
+    <merge in changes from dev>
     cap puppet:up HOST="example.com.au" # pulls down changes from git
     cap puppet:go HOST="example.com.au"
 
